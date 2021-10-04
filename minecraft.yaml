@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: minecraft_1.14.4_paper
+ labels:
+   app: minecraft_1.14.4_paper
+spec:
+ containers:
+ - name: minecraft_1.14.4_paper
+   image: ubuntu
+   command: ['sh', '-c', 'apt update -y && apt-get install default-jre curl -y && curl -P /home/ https://papermc.io/api/v2/projects/paper/versions/1.14.4/builds/243/downloads/paper-1.14.4-243.jar --output paper-1.14.4-243.jar && cd /home && java -Xms1G -Xmx2G -jar paper-1.14.4-243.jar && sed -i 's/false/true/' eula.txt && java -Xms1G -Xmx2G -jar paper-1.14.4-243.jar']
