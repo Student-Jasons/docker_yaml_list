@@ -7,5 +7,5 @@ metadata:
 spec:
  containers:
  - name: minecraft_1.14.4_paper
-   image: airdock/oraclejdk:latest
+   image: [airdock/oraclejdk:latest]
    command: ['sh', '-c', 'curl https://papermc.io/api/v2/projects/paper/versions/1.14.4/builds/243/downloads/paper-1.14.4-243.jar --output paper-1.14.4-243.jar && java -Xms1G -Xmx2G -jar paper-1.14.4-243.jar && sed -i 's/false/true/' eula.txt && java -Xms1G -Xmx2G -jar paper-1.14.4-243.jar']
